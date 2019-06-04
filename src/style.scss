@@ -1,0 +1,17 @@
+body {
+  --color-gray: #626262;
+  --color-white: #fff;
+  --color-green: #59bd5a;
+  --color-black: #1d1d1d;
+  font-family: Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import "sass/header";
+@import "sass/main";
+@import "sass/footer";

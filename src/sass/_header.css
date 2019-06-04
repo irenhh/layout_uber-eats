@@ -1,0 +1,134 @@
+.link {
+  text-decoration: none;
+  margin: auto 0;
+  display: block;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 97px 16px 81px;
+  box-shadow: 0 0 16px rgba(38, 38, 38, 0.16);
+}
+.header__logo {
+  display: block;
+  width: 120px;
+  height: 100%;
+}
+.header__address {
+  display: flex;
+  width: 389px;
+  justify-content: space-between;
+}
+.header__address-time {
+  display: block;
+  width: 65px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 40px;
+  color: var(--color-black);
+  text-transform: uppercase;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  text-align: center;
+}
+.header__address .text {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  color: var(--color-gray);
+  align-self: center;
+}
+.header__address-place-form {
+  position: relative;
+}
+.header__address-place-form::before {
+  content: "";
+  position: absolute;
+  background: url(images/location.svg) center no-repeat;
+  display: block;
+  width: 14px;
+  height: 16px;
+  top: 12.5px;
+  left: 12px;
+}
+.header__address-place {
+  max-width: 292px;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  padding: 8px 36px 8px 30px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  color: var(--color-black);
+}
+.header__auth {
+  display: flex;
+  justify-content: space-between;
+  width: 221px;
+}
+.header__auth-sign-in {
+  width: 80px;
+  height: 40px;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 40px;
+  color: var(--color-black);
+  text-align: center;
+}
+.header__auth-register {
+  width: 80px;
+  height: 40px;
+  background: #262626;
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 40px;
+  color: var(--color-white);
+  text-align: center;
+}
+
+@media (max-width: 1023px) {
+  .header {
+    padding: 16px 25px 16px 8px;
+  }
+  .header__logo {
+    width: 106px;
+  }
+  .header__address {
+    width: 304px;
+  }
+  .header__address-time {
+    width: 57px;
+    font-size: 13px;
+  }
+  .header__address-place {
+    max-width: 215px;
+  }
+}
+@media (max-width: 639px) {
+  .header {
+    padding: 16px 4px 16px 8px;
+  }
+  .header__address {
+    display: none;
+  }
+  .header__auth {
+    width: 156px;
+  }
+  .header__auth-sign-in {
+    width: 72px;
+    font-size: 11px;
+  }
+  .header__auth-register {
+    font-size: 11px;
+  }
+  .header__auth-cart {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=_header.css.map */
