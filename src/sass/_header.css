@@ -5,10 +5,14 @@
 }
 
 .header {
+  box-shadow: 0 0 16px rgba(38, 38, 38, 0.16);
+}
+.header__nav {
   display: flex;
   justify-content: space-between;
+  max-width: 1124px;
+  margin: 0 auto;
   padding: 16px 97px 16px 81px;
-  box-shadow: 0 0 16px rgba(38, 38, 38, 0.16);
 }
 .header__logo {
   display: block;
@@ -57,7 +61,8 @@
   max-width: 292px;
   border: 1px solid #e0e0e0;
   border-radius: 2px;
-  padding: 8px 36px 8px 30px;
+  padding: 8px 17px 8px 30px;
+  outline-color: var(--color-black);
   font-size: 16px;
   font-weight: normal;
   line-height: 24px;
@@ -79,6 +84,11 @@
   color: var(--color-black);
   text-align: center;
 }
+.header__auth-sign-in:hover {
+  background: var(--color-green);
+  color: var(--color-white);
+  border: 0;
+}
 .header__auth-register {
   width: 80px;
   height: 40px;
@@ -90,9 +100,16 @@
   color: var(--color-white);
   text-align: center;
 }
+.header__auth-register:hover {
+  background: var(--color-green);
+}
+.header__auth-cart {
+  cursor: pointer;
+}
 
 @media (max-width: 1023px) {
-  .header {
+  .header__nav {
+    max-width: 768px;
     padding: 16px 25px 16px 8px;
   }
   .header__logo {
@@ -110,7 +127,8 @@
   }
 }
 @media (max-width: 639px) {
-  .header {
+  .header__nav {
+    max-width: 320px;
     padding: 16px 4px 16px 8px;
   }
   .header__address {
