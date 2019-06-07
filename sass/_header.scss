@@ -17,10 +17,15 @@ $color-black: var(--color-black);
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  padding: 16px 97px 16px 81px;
   box-shadow: 0 0 16px rgba(38, 38, 38, 0.16);
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1124px;
+    margin: 0 auto;
+    padding: 16px 97px 16px 81px;
+  }
 
   &__logo {
     display: block;
@@ -32,75 +37,93 @@ $color-black: var(--color-black);
     display: flex;
     width: 389px;
     justify-content: space-between;
-
-    &-time {
-      display: block;
-      width: 65px;
-      height: 40px;
-      @include font(16px, normal, 40px, $color-black);
-      text-transform: uppercase;
-      border: 1px solid #e0e0e0;
-      border-radius: 2px;
-      text-align: center;
-    }
-
-    .text {
-      @include font(16px, 300, 19px, $color-gray);
-      align-self: center;
-    }
-
-    &-place-form {
-      position: relative;
-
-      &::before {
-        content: "";
-        position: absolute;
-        background: url(images/location.svg) center no-repeat;
-        display: block;
-        width: 14px;
-        height: 16px;
-        top: 12.5px;
-        left: 12px;              
-      }
-    }
-
-    &-place {
-      max-width: 292px;
-      border: 1px solid #e0e0e0;
-      border-radius: 2px;
-      padding: 8px 36px 8px 30px;
-      @include font(16px, normal, 24px, $color-black);
-    }
   }
 
+  &__address-time {
+    display: block;
+    width: 65px;
+    height: 40px;
+    @include font(16px, normal, 40px, $color-black);
+    text-transform: uppercase;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    text-align: center;
+  }
+
+  &__address .text {
+    @include font(16px, 300, 19px, $color-gray);
+    align-self: center;
+  }
+
+  &__address-place-form {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url(images/location.svg) center no-repeat;
+      display: block;
+      width: 14px;
+      height: 16px;
+      top: 12.5px;
+      left: 12px;              
+    }
+  }
+    
+  &__address-place {
+    max-width: 292px;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    padding: 8px 17px 8px 30px;
+    outline-color: $color-black;
+    @include font(16px, normal, 24px, $color-black);
+  }
+  
   &__auth {
     display: flex;
     justify-content: space-between;
     width: 221px;
+  }
 
-    &-sign-in {
-      width: 80px;
-      height: 40px;
-      border: 1px solid #e0e0e0;
-      border-radius: 2px;
-      @include font(13px, 500, 40px, $color-black);
-      text-align: center;
-    }
+  &__auth-sign-in {
+    width: 80px;
+    height: 40px;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    @include font(13px, 500, 40px, $color-black);
+    text-align: center;
+  }
 
-    &-register {
-      width: 80px;
-      height: 40px;
-      background: #262626;
-      border-radius: 2px;
-      @include font(13px, 500, 40px, $color-white);
-      text-align: center;
-    }
-  }  
+  &__auth-sign-in:hover {
+    background: $color-green;
+    color: $color-white;
+    border: 0;
+  }
+  
+  &__auth-register {
+    width: 80px;
+    height: 40px;
+    background: #262626;
+    border-radius: 2px;
+    @include font(13px, 500, 40px, $color-white);
+    text-align: center;
+  }
+
+  &__auth-register:hover {
+    background: $color-green;
+  }
+
+  &__auth-cart {
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 1023px) {
   .header {
-    padding: 16px 25px 16px 8px;
+    &__nav {
+      max-width: 768px;
+      padding: 16px 25px 16px 8px;
+    }
 
     &__logo {
       width: 106px;
@@ -108,22 +131,25 @@ $color-black: var(--color-black);
 
     &__address {
       width: 304px;
+    }
 
-      &-time {
-        width: 57px;
-        font-size: 13px;
-      }
+    &__address-time {
+      width: 57px;
+      font-size: 13px;
+    }
 
-      &-place {
+    &__address-place {
         max-width: 215px;
-      }
     }
   }
 }
 
 @media (max-width: 639px) {
   .header {
-    padding: 16px 4px 16px 8px;
+    &__nav {
+      max-width: 320px;
+      padding: 16px 4px 16px 8px;
+    }
 
     &__address {
       display: none;
@@ -131,19 +157,19 @@ $color-black: var(--color-black);
 
     &__auth {
       width: 156px;
+    }
 
-      &-sign-in {
-        width: 72px;
-        font-size: 11px;
-      }
+    &__auth-sign-in {
+      width: 72px;
+      font-size: 11px;
+    }
 
-      &-register {
-        font-size: 11px;
-      }
+    &__auth-register {
+      font-size: 11px;
+    }
 
-      &-cart {
-        display: none;
-      }
+    &__auth-cart {
+      display: none;
     }
   }
 }

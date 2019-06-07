@@ -17,9 +17,15 @@ $color-black: var(--color-black);
 }
 
 .footer {
-  padding: 56px 81px 40px;
+  padding: 0 81px 0;
   background: #262626;
-  position: relative;
+
+  &__container {
+    max-width: 962px;
+    margin: 0 auto;
+    position: relative;
+    padding: 56px 0 40px;
+  }
 
   &__logo {
     margin-bottom: 40px;
@@ -29,84 +35,12 @@ $color-black: var(--color-black);
     display: grid;
     grid-template: 1fr / 1fr 1fr 1fr;
     padding: 32px 0 48px;
-  
-    &-lang {
-      position: relative;
-      width: fit-content;
-  
-      &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        background: url(images/world.svg) center no-repeat;
-        width: 16px;
-        height: 16px;
-        top: 12px;
-        left: 16px;
-      }
-  
-      &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        background: url(images/arrow.svg) center no-repeat;
-        width: 14px;
-        height: 8px;
-        top: 16px;
-        right: 8px;
-      }
-  
-      &-input {
-        width: 227px;
-        height: 40px;
-        background: #3b3b3b;
-        border: 0;
-        border-radius: 2px;
-        padding: 12px 48px;
-  
-        &::placeholder {
-          @include font(13px, normal, 15px, $color-white);
-        }
-      }
-    }
-  
-    &-name {
-      margin-top: 33px;
-      @include font(16px, normal, 19px, $color-white);
-  
-      &-hash {
-        color: #49a144;
-      }
-    }
-  
-    &-social {
-      display: flex;
-      justify-content: space-between;
-      width: 92px;
-      margin-top: 17px;
-    }
-  
-    .column-2,
-    .column-3 {
-          
-      .link {
-        @include font(13px, normal, 15px, $color-white);
-      }
-  
-      .link + .link {
-        margin-top: 23px;
-      }
-    }
   }
 
   &__app {
     display: flex;
     justify-content: center;
     margin: 41px 0 39px;
-  
-    .gplay {
-      margin-left: 40px;
-    }
   }
 
   &__rights {
@@ -114,17 +48,93 @@ $color-black: var(--color-black);
     grid-template: 1fr / repeat(3, 1fr);
     margin-top: 40px;
     @include font(11px, normal, 13px, $color-white);
-      
+  }
+}
+
+.footer__nav {
+  &-lang {
+    position: relative;
+    width: fit-content;
+  }
+
+  &-lang::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: url(images/arrow.svg) center no-repeat;
+    width: 14px;
+    height: 8px;
+    top: 16px;
+    right: 8px;
+    cursor: pointer;
+    pointer-events: none;
+  }
+  
+  &-name {
+    margin-top: 33px;
+    @include font(16px, normal, 19px, $color-white);
+  }
+
+  &-name-hash {
+    color: #49a144;
+  }
+
+  &-social {
+    display: flex;
+    justify-content: space-between;
+    width: 92px;
+    margin-top: 17px;
+  }
+
+  .column-2,
+  .column-3 {
+        
     .link {
-      color: inherit;
+      @include font(13px, normal, 15px, $color-white);
     }
+
+    .link + .link {
+      margin-top: 23px;
+    }
+  }
+}
+
+.select-lang {
+  background-image: url(images/world.svg);
+  background-position: 16px center;
+  background-repeat: no-repeat;
+  text-transform: uppercase;
+  background-color: #3b3b3b;
+  outline-color: white;
+  color: white;
+  border: 0;
+  border-radius: 2px;
+  padding: 0 48px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  width: 227px;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.footer__app {
+  .gplay {
+    margin-left: 40px;
+  }
+}
+
+.footer__rights {
+  .link {
+    color: inherit;
   }
 }
 
 .arrow-to-top {
   width: 80px;
   height: 80px;
-  position: absolute;
+  position: fixed;
   background-color: $color-green;
   border-radius: 2px;
   right: 16px;
@@ -140,23 +150,34 @@ $color-black: var(--color-black);
     bottom: 28px;
     right: 32px;
   }
+
+  &:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+  }
 }
 
 @media (max-width: 1023px) {
   .footer {
-    padding: 55px 8px 40px 8px;
+    padding: 0 8px;
+
+    &__container {
+      max-width: 768px;
+    }
 
     &__nav {
       margin-bottom: 51px;
+    }
+  }
 
-      &-lang-input {
-        width: 176px;
-      }
+  .footer__nav {
+    .select-lang {
+      width: 176px;
+    }
 
-      &-social {
-        width: 96px;
-        margin-top: 15px;
-      }
+    &-social {
+      width: 96px;
+      margin-top: 15px;
     }
   }
 
@@ -168,6 +189,10 @@ $color-black: var(--color-black);
 
 @media (max-width: 639px) {
   .footer {
+    &__container {
+      max-width: 320px;
+    }
+    
     &__nav {
       grid: auto-flow / 1fr;
       margin-bottom: 40px;
@@ -184,10 +209,6 @@ $color-black: var(--color-black);
 
     &__app {
       margin: 24px 0;
-
-      .gplay {
-        margin-left: 24px;
-      }
     }
 
     &__rights {
@@ -196,6 +217,12 @@ $color-black: var(--color-black);
       .link {
         margin-top: 24px;
       }
+    }
+  }
+
+  .footer__app {
+    .gplay {
+      margin-left: 24px;
     }
   }
 
