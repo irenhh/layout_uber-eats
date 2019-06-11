@@ -18,6 +18,14 @@ body {
   display: block;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 .header {
   box-shadow: 0 0 16px rgba(38, 38, 38, 0.16);
 }
@@ -33,7 +41,7 @@ body {
   width: 120px;
   height: 100%;
 }
-.header__address {
+.header__address-place-form {
   display: flex;
   width: 389px;
   justify-content: space-between;
@@ -58,10 +66,10 @@ body {
   color: var(--color-gray);
   align-self: center;
 }
-.header__address-place-form {
+.header__address-input {
   position: relative;
 }
-.header__address-place-form::before {
+.header__address-input::before {
   content: "";
   position: absolute;
   background: url(images/location.svg) center no-repeat;
@@ -129,7 +137,7 @@ body {
   .header__logo {
     width: 106px;
   }
-  .header__address {
+  .header__address-place-form {
     width: 304px;
   }
   .header__address-time {
@@ -140,12 +148,12 @@ body {
     max-width: 215px;
   }
 }
-@media (max-width: 639px) {
+@media (max-width: 639px) and (min-width: 320px) {
   .header__nav {
     max-width: 320px;
     padding: 16px 4px 16px 8px;
   }
-  .header__address {
+  .header__address-place-form {
     display: none;
   }
   .header__auth {
@@ -186,6 +194,7 @@ body {
   width: 22px;
   height: 22px;
   bottom: 14px;
+  pointer-events: none;
 }
 .main-content__search-input {
   width: 100%;
@@ -273,7 +282,7 @@ body {
     max-width: 368px;
   }
 }
-@media (max-width: 639px) {
+@media (max-width: 639px) and (min-width: 320px) {
   .main-content {
     max-width: 320px;
   }
@@ -493,7 +502,7 @@ body {
     bottom: 25px;
   }
 }
-@media (max-width: 639px) {
+@media (max-width: 639px) and (min-width: 320px) {
   .footer__container {
     max-width: 320px;
   }

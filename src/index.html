@@ -2,19 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width,
-          user-scalable=no,
-          initial-scale=1.0,
-          maximum-scale=1.0,
-          minimum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Uber Eats</title>
   <link rel="shortcut icon" type="image/ico" href="images/favicon.ico">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap&subset=cyrillic" rel="stylesheet">
-</head>
-<body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script>
     $(document).ready(function () {
@@ -30,22 +23,27 @@
       });
     });
   </script>
-
+</head>
+<body>
   <header class="header">
     <div class="header__nav">
       <a href="#">
-        <img class="header__logo" src="images/logo.svg" alt="logo">
+        <img class="header__logo" src="images/logo.svg" alt="uber logo">
       </a>
 
       <div class="header__address">
-        <a href="#" class="header__address-time link">asap</a>
-        <span class="text">to</span>
         <form class="header__address-place-form">
-          <input 
-            class="header__address-place" 
-            type="text" 
-            value="ul. Tarasivska St, 16"
-          >
+          <a href="#" class="header__address-time link">asap</a>
+          <span class="text">to</span>
+          <div class="header__address-input">
+            <input 
+              class="header__address-place" 
+              type="text" 
+              value="ul. Tarasivska St, 16"
+              aria-label="delivery address"
+            >
+          </div>
+          <input class="visually-hidden" type="submit">
         </form>
       </div>
 
@@ -62,7 +60,7 @@
       <input class="main-content__search-input" type="search" placeholder="Search for restaurant or cuisine">
     </form>
 
-    <div class="main-content__address">
+    <form class="main-content__address">
       <div>
         <span class="text-gray">When</span>
         <a href="#" class="main-content__address-time link">asap</a>
@@ -70,14 +68,16 @@
 
       <div>
         <span class="text-gray">To</span>
-        <form class="main-content__address-place-form">
+        <div class="main-content__address-place-form">
           <input 
             class="main-content__address-place" 
             type="text" 
             value="ul. Tarasivska St, 16"
+            aria-label="delivery address"
           >
-        </form>
-      </div>
+          <input class="visually-hidden" type="submit">
+        </div>
+      </form>
 
     </div>
 
@@ -187,7 +187,7 @@
   <footer class="footer">
     <div class="footer__container">
       <a href="#" class="footer__logo link">
-        <img src="images/white-logo.svg" alt="logo">
+        <img src="images/white-logo.svg" alt="uber logo">
       </a>
       <hr class="hr">
 
