@@ -144,9 +144,6 @@
   .footer {
     padding: 0 8px;
   }
-  .footer__container {
-    max-width: 768px;
-  }
   .footer__nav {
     margin-bottom: 51px;
   }
@@ -165,9 +162,6 @@
   }
 }
 @media (max-width: 639px) {
-  .footer__container {
-    max-width: 320px;
-  }
   .footer__nav {
     grid: auto-flow/1fr;
     margin-bottom: 40px;
@@ -177,7 +171,7 @@
     margin-top: 39px;
   }
   .footer .column-3 {
-    margin-top: 23px;
+    margin-top: 7px;
   }
   .footer__app {
     margin: 24px 0;

@@ -74,7 +74,6 @@
   padding: 0 0 20px;
 }
 .restaurants-item__image {
-  max-width: 308px;
   width: 100%;
   height: auto;
 }
@@ -106,21 +105,13 @@
 
 @media (max-width: 1023px) {
   .main-content {
-    max-width: 768px;
     padding: 30px 8px 48px 8px;
   }
   .main-content__restaurants {
     grid: auto-flow/repeat(2, 1fr);
   }
-
-  .restaurants-item__image {
-    max-width: 368px;
-  }
 }
 @media (max-width: 639px) {
-  .main-content {
-    max-width: 320px;
-  }
   .main-content__search::before {
     width: 16px;
     height: 16px;
