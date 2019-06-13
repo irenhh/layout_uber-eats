@@ -8,6 +8,9 @@
   padding: 0 81px 0;
   background: #262626;
 }
+.footer * {
+  outline-color: white;
+}
 .footer__container {
   max-width: 962px;
   margin: 0 auto;
@@ -16,6 +19,7 @@
 }
 .footer__logo {
   margin-bottom: 40px;
+  width: fit-content;
 }
 .footer__nav {
   display: grid;
@@ -77,6 +81,7 @@
   font-weight: normal;
   line-height: 15px;
   color: var(--color-white);
+  width: fit-content;
 }
 .footer__nav .column-2 .link + .link,
 .footer__nav .column-3 .link + .link {
@@ -89,7 +94,6 @@
   background-repeat: no-repeat;
   text-transform: uppercase;
   background-color: #3b3b3b;
-  outline-color: white;
   color: white;
   border: 0;
   border-radius: 2px;
@@ -109,6 +113,7 @@
 
 .footer__rights .link {
   color: inherit;
+  width: fit-content;
 }
 
 .arrow-to-top {
