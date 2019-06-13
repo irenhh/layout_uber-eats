@@ -19,6 +19,9 @@ body {
 .header {
   box-shadow: 0 0 16px rgba(38, 38, 38, 0.16);
 }
+.header *:focus {
+  outline: 1px solid var(--color-gray);
+}
 .header__nav {
   display: flex;
   justify-content: space-between;

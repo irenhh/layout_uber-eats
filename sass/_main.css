@@ -5,10 +5,17 @@
   color: var(--color-gray);
 }
 
+.fit-content {
+  width: fit-content;
+}
+
 .main-content {
   max-width: 1124px;
   padding: 32px 81px 100px;
   margin: 0 auto;
+}
+.main-content *:focus {
+  outline: 1px solid var(--color-gray);
 }
 
 .main-content__search {
