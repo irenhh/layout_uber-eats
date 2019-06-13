@@ -134,6 +134,11 @@ $color-black: var(--color-black);
     &__address {
       display: flex;
       justify-content: space-between;
+      min-width: 95vw;
+    }
+
+    &__address-input-container {
+      flex-basis: 80%;
     }
 
     &__address-time {
@@ -164,7 +169,7 @@ $color-black: var(--color-black);
     }
   
     &__address-place {
-      max-width: 227px;
+      width: 100%;
       border: 1px solid #e0e0e0;
       border-radius: 2px;
       padding: 8px 36px;
