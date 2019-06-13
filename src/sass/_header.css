@@ -124,7 +124,6 @@ body {
 
 @media (max-width: 1023px) {
   .header__nav {
-    max-width: 768px;
     padding: 16px 25px 16px 8px;
   }
   .header__logo {
@@ -143,7 +142,6 @@ body {
 }
 @media (max-width: 639px) {
   .header__nav {
-    max-width: 320px;
     padding: 16px 4px 16px 8px;
   }
   .header__address-place-form {
