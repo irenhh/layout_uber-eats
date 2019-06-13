@@ -169,10 +169,6 @@ $color-black: var(--color-black);
   .footer {
     padding: 0 8px;
 
-    &__container {
-      max-width: 768px;
-    }
-
     &__nav {
       margin-bottom: 51px;
     }
@@ -197,10 +193,6 @@ $color-black: var(--color-black);
 
 @media (max-width: 639px) {
   .footer {
-    &__container {
-      max-width: 320px;
-    }
-    
     &__nav {
       grid: auto-flow / 1fr;
       margin-bottom: 40px;
@@ -212,7 +204,7 @@ $color-black: var(--color-black);
     }
 
     .column-3 {
-      margin-top: 23px;
+      margin-top: 7px;
     }
 
     &__app {
