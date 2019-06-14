@@ -2,19 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width,
-          user-scalable=no,
-          initial-scale=1.0,
-          maximum-scale=1.0,
-          minimum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Kyiv restaurants delivery">
   <title>Uber Eats</title>
   <link rel="shortcut icon" type="image/ico" href="images/favicon.ico">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap&subset=cyrillic" rel="stylesheet">
-</head>
-<body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script>
     $(document).ready(function () {
@@ -30,22 +24,27 @@
       });
     });
   </script>
-
+</head>
+<body>
   <header class="header">
     <div class="header__nav">
       <a href="#">
-        <img class="header__logo" src="images/logo.svg" alt="logo">
+        <img class="header__logo" src="images/logo.svg" alt="uber eats">
       </a>
 
       <div class="header__address">
-        <a href="#" class="header__address-time link">asap</a>
-        <span class="text">to</span>
         <form class="header__address-place-form">
-          <input 
-            class="header__address-place" 
-            type="text" 
-            value="ul. Tarasivska St, 16"
-          >
+          <a href="#" class="header__address-time link">asap</a>
+          <span class="text">to</span>
+          <div class="header__address-input">
+            <input 
+              class="header__address-place" 
+              type="text" 
+              value="ul. Tarasivska St, 16"
+              aria-label="delivery address"
+            >
+          </div>
+          <input class="visually-hidden" type="submit">
         </form>
       </div>
 
@@ -62,25 +61,28 @@
       <input class="main-content__search-input" type="search" placeholder="Search for restaurant or cuisine">
     </form>
 
-    <div class="main-content__address">
+    <form class="main-content__address">
       <div>
         <span class="text-gray">When</span>
         <a href="#" class="main-content__address-time link">asap</a>
       </div>
 
-      <div>
+      <div class="main-content__address-input-container">
         <span class="text-gray">To</span>
-        <form class="main-content__address-place-form">
+        <div class="main-content__address-place-form">
           <input 
             class="main-content__address-place" 
             type="text" 
             value="ul. Tarasivska St, 16"
+            aria-label="delivery address"
           >
-        </form>
-      </div>
+          <input class="visually-hidden" type="submit">
+        </div>
+      </form>
 
     </div>
 
+    <h1 class="visually-hidden">Delivery from Kyiv restaurants</h1>
     <h2 class="main-content__heading">Kyiv Restaurants</h2>
 
     <div class="main-content__restaurants">
@@ -88,7 +90,7 @@
         <a href="#" class="link">
           <img class="restaurants-item__image" src="images/mcdonalds.png" alt="mcdonalds">
         </a>
-        <a href="#" class="link">
+        <a href="#" class="link fit-content">
           <h3 class="restaurants-item__heading">Макдоналдс</h3>
         </a>
         <p class="restaurants-item__cuisine">$$ • Бургеры</p>
@@ -99,7 +101,7 @@
         <a href="#" class="link">
           <img class="restaurants-item__image" src="images/wokwei.png" alt="wokwei">
         </a>
-        <a href="#" class="link">
+        <a href="#" class="link fit-content">
           <h3 class="restaurants-item__heading">WOKWEI</h3>
         </a>
         <p class="restaurants-item__cuisine">₴ • Китайська • Азіатська</p>
@@ -110,7 +112,7 @@
         <a href="#" class="link">
           <img class="restaurants-item__image" src="images/yizha.png" alt="YIZHA">
         </a>
-        <a href="#" class="link">
+        <a href="#" class="link fit-content">
           <h3 class="restaurants-item__heading">YIZHA</h3>
         </a>
         <p class="restaurants-item__cuisine">₴₴ • Американська • Бургери • Вулична їжа</p>
@@ -121,7 +123,7 @@
           <a href="#" class="link">
             <img class="restaurants-item__image" src="images/musafir.png" alt="musafir">
           </a>
-          <a href="#" class="link">
+          <a href="#" class="link fit-content">
             <h3 class="restaurants-item__heading">Musafir (вул. Саксаганського)</h3>
           </a>
           <p class="restaurants-item__cuisine">₴₴ • Близькосхідна</p>
@@ -132,7 +134,7 @@
           <a href="#" class="link">
             <img class="restaurants-item__image" src="images/wokwei2.png" alt="wokwei">
           </a>
-          <a href="#" class="link">
+          <a href="#" class="link fit-content">
             <h3 class="restaurants-item__heading">WOKWEI</h3>
           </a>
           <p class="restaurants-item__cuisine">₴ • Китайська • Азіатська</p>
@@ -143,7 +145,7 @@
           <a href="#" class="link">
             <img class="restaurants-item__image" src="images/milkbar.png" alt="milk bar">
           </a>
-          <a href="#" class="link">
+          <a href="#" class="link fit-content">
             <h3 class="restaurants-item__heading">Milk Bar</h3>
           </a>
           <p class="restaurants-item__cuisine">₴₴ • Десерти • Європейська</p>
@@ -154,7 +156,7 @@
           <a href="#" class="link">
             <img class="restaurants-item__image" src="images/mimosa.png" alt="mimosa brooklyn pizza">
           </a>
-          <a href="#" class="link">
+          <a href="#" class="link fit-content">
             <h3 class="restaurants-item__heading">Mimosa Brooklyn Pizza</h3>
           </a>
           <p class="restaurants-item__cuisine">₴₴ • Італійська • Піца • Американська</p>
@@ -165,7 +167,7 @@
           <a href="#" class="link">
             <img class="restaurants-item__image" src="images/tobe.png" alt="to be">
           </a>
-          <a href="#" class="link">
+          <a href="#" class="link fit-content">
             <h3 class="restaurants-item__heading">To Be</h3>
           </a>
           <p class="restaurants-item__cuisine">₴₴ • Японська • Азіатська • Суші</p>
@@ -176,7 +178,7 @@
           <a href="#" class="link">
             <img class="restaurants-item__image" src="images/druzicafe.png" alt="druzi cafe">
           </a>
-          <a href="#" class="link">
+          <a href="#" class="link fit-content">
             <h3 class="restaurants-item__heading">Druzi Cafe (вул. Прорізна)</h3>
           </a>
           <p class="restaurants-item__cuisine">₴₴ • Американська • Сучасна європейська • У...</p>
@@ -186,8 +188,8 @@
   </main>
   <footer class="footer">
     <div class="footer__container">
-      <a href="#" class="footer__logo link">
-        <img src="images/white-logo.svg" alt="logo">
+      <a href="#" aria-hidden="true" class="footer__logo link">
+        <img src="images/white-logo.svg" alt="">
       </a>
       <hr class="hr">
 

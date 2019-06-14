@@ -10,14 +10,30 @@ $color-black: var(--color-black);
   color: $color;
 }
 
+body {
+  min-width: 320px;
+}
+
 .link {
   text-decoration: none;
   margin: auto 0;
   display: block;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 .header {
   box-shadow: 0 0 16px rgba(38, 38, 38, 0.16);
+
+  *:focus {
+    outline: 1px solid var(--color-gray);
+  }
 
   &__nav {
     display: flex;
@@ -33,7 +49,7 @@ $color-black: var(--color-black);
     height: 100%;
   }
 
-  &__address {
+  &__address-place-form {
     display: flex;
     width: 389px;
     justify-content: space-between;
@@ -55,7 +71,7 @@ $color-black: var(--color-black);
     align-self: center;
   }
 
-  &__address-place-form {
+  &__address-input {
     position: relative;
 
     &::before {
@@ -66,7 +82,7 @@ $color-black: var(--color-black);
       width: 14px;
       height: 16px;
       top: 12.5px;
-      left: 12px;              
+      left: 12px;           
     }
   }
     
@@ -121,7 +137,6 @@ $color-black: var(--color-black);
 @media (max-width: 1023px) {
   .header {
     &__nav {
-      max-width: 768px;
       padding: 16px 25px 16px 8px;
     }
 
@@ -129,7 +144,7 @@ $color-black: var(--color-black);
       width: 106px;
     }
 
-    &__address {
+    &__address-place-form {
       width: 304px;
     }
 
@@ -147,11 +162,10 @@ $color-black: var(--color-black);
 @media (max-width: 639px) {
   .header {
     &__nav {
-      max-width: 320px;
       padding: 16px 4px 16px 8px;
     }
 
-    &__address {
+    &__address-place-form {
       display: none;
     }
 

@@ -20,6 +20,10 @@ $color-black: var(--color-black);
   padding: 0 81px 0;
   background: #262626;
 
+  * {
+    outline-color: white;
+  }
+
   &__container {
     max-width: 962px;
     margin: 0 auto;
@@ -29,6 +33,7 @@ $color-black: var(--color-black);
 
   &__logo {
     margin-bottom: 40px;
+    width: fit-content;
   }
 
   &__nav {
@@ -93,6 +98,7 @@ $color-black: var(--color-black);
         
     .link {
       @include font(13px, normal, 15px, $color-white);
+      width: fit-content;
     }
 
     .link + .link {
@@ -107,7 +113,6 @@ $color-black: var(--color-black);
   background-repeat: no-repeat;
   text-transform: uppercase;
   background-color: #3b3b3b;
-  outline-color: white;
   color: white;
   border: 0;
   border-radius: 2px;
@@ -130,6 +135,7 @@ $color-black: var(--color-black);
 .footer__rights {
   .link {
     color: inherit;
+    width: fit-content;
   }
 }
 
@@ -163,10 +169,6 @@ $color-black: var(--color-black);
   .footer {
     padding: 0 8px;
 
-    &__container {
-      max-width: 768px;
-    }
-
     &__nav {
       margin-bottom: 51px;
     }
@@ -191,10 +193,6 @@ $color-black: var(--color-black);
 
 @media (max-width: 639px) {
   .footer {
-    &__container {
-      max-width: 320px;
-    }
-    
     &__nav {
       grid: auto-flow / 1fr;
       margin-bottom: 40px;
@@ -206,7 +204,7 @@ $color-black: var(--color-black);
     }
 
     .column-3 {
-      margin-top: 23px;
+      margin-top: 7px;
     }
 
     &__app {
